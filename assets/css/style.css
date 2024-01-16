@@ -835,6 +835,7 @@ body {
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+  font-size: 17px;
 }
 
 .contact-item ion-icon {
@@ -845,7 +846,8 @@ body {
 address {
   font-style: normal;
   color: var(--gainsboro);
-  font-size: var(--fs-5);
+  /* font-size: var(--fs-5); */
+  font-size: 17px;
 }
 
 .contact-link:is(:hover, :focus) {
