@@ -106,3 +106,12 @@ function displayTestimonial() {
   }, 1000 * 3);
 }
 window.onload = displayTestimonial;
+
+//////*************************
+var expconts = document.querySelectorAll(".expandable_cont");
+
+for (let item of expconts) {
+  item.querySelector(".expandable_but").addEventListener("click", function () {
+    item.classList.toggle("expanded");
+  });
+}
