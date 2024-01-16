@@ -584,9 +584,10 @@ body {
 }
 
 .package-card {
-  background: var(--cultured);
+  background: rgb(240, 244, 244);
   overflow: hidden;
   border-radius: 15px;
+  box-shadow: 0 1px 2px 0 #3c40434d, 0 2px 6px 2px #3c404326;
 }
 
 .package-card .card-banner {
@@ -600,7 +601,7 @@ body {
 }
 
 .package-card .card-content {
-  padding: 30px 0px;
+  padding: 20px 0px;
   font-family: "Fira Mono", monospace;
 }
 .package-card .journey_details {
@@ -637,6 +638,7 @@ body {
   padding: 8px;
   box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.15);
   border-radius: 50px;
+  /* margin: auto; */
 }
 
 .card-meta-item {
@@ -652,6 +654,13 @@ body {
   width: 1px;
   background: hsla(0, 0%, 0%, 0.3);
 }
+.card-meta-boxx {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 
 .meta-box {
   display: flex;
@@ -660,7 +669,9 @@ body {
   gap: 5px;
   padding-inline: 9px;
   /* color: var(--black-coral); */
-  font-size: var(--fs-8);
+  /* font-size: var(--fs-8); */
+
+  font-size: 14px;
 }
 
 .meta-box > ion-icon {
@@ -671,7 +682,7 @@ body {
 .package-card .card-price {
   background: var(--united-nations-blue);
   color: var(--white);
-  padding: 25px 20px;
+  padding: 25px 20px 0 25px;
   text-align: center;
 }
 
@@ -701,7 +712,7 @@ body {
 }
 
 .package-card .price {
-  font-size: var(--fs-2);
+  font-size: 18px;
   font-family: var(--ff-montserrat);
   font-weight: var(--fw-800);
   margin-bottom: 20px;
@@ -1501,4 +1512,40 @@ address {
   .testimonial .wrapper {
     font-size: 14px;
   }
+}
+/*--------------------------------------------------------*/
+.expandable {
+  display: none;
+  overflow-x: auto;
+}
+.expandable_cont.expanded .expandable {
+  display: block;
+}
+.expandable_but {
+  margin: 15px auto 0 auto;
+  width: max-content;
+  cursor: pointer;
+  display: flex;
+}
+
+.expandable_but:hover {
+  text-decoration: underline;
+}
+
+.expandable_cont .expandable_but .less {
+  display: none;
+  gap: 5px;
+}
+
+.expandable_cont .expandable_but .more {
+  display: flex;
+  gap: 5px;
+}
+
+.expandable_cont.expanded .expandable_but .less {
+  display: flex;
+}
+
+.expandable_cont.expanded .expandable_but .more {
+  display: none;
 }
